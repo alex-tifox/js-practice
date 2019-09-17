@@ -16,7 +16,19 @@ let appData = {
 
 appData.budget = money;
 appData.timeData = time;
-appData.expenses[prompt("Enter mandatody expenses type in this month")] 
-                    = prompt("How much will this cost?");
 
-alert("Your 1-day budget = " + appData.budget/30);
+for (let i = 0; i < 2; i++) {
+    let a = prompt("Enter mandatody expenses type in this month"),
+        b = prompt("How much will this cost?");
+
+    if ( (typeof(a) === 'string') && (typeof(a)) != null && (typeof(a)) != null
+        && a != '' && b != '' && a.length < 50 )  {
+            appData.expenses[a] = b;
+    } else {
+
+    }
+}                    
+
+appData.moneyPerDay = appData.budget/30;
+
+alert("Your 1-day budget = " + appData.moneyPerDay);
