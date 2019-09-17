@@ -1,17 +1,22 @@
 'use strict';
 
-console.log('Hello world');
+let money, time;
 
-var someData = 5;
-console.log(someData);
-console.log('string'*9);
+money = prompt("Your month budget?");
+time = prompt("Enter date in format YYYY-MM-DD");
 
-//alert("Hello");
+let appData = {
+    budget: '',
+    timeData : '',
+    expenses: {},
+    oprionalExpenses: {},
+    income: [],
+    savings: false
+};
 
-// let answer = confirm('are you here');
+appData.budget = money;
+appData.timeData = time;
+appData.expenses[prompt("Enter mandatody expenses type in this month")] 
+                    = prompt("How much will this cost?");
 
-// console.log(answer);
-
-let answer = prompt('are you here', 'yes');
-
-console.log(typeof(answer));
+alert("Your 1-day budget = " + appData.budget/30);
